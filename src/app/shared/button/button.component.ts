@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,7 +8,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
-export class ButtonComponent {
+export class ButtonComponent implements OnInit{
+  ngOnInit(): void {
+    this.setUpAnimation()
+  }
+  
   @Input('size')
   size = 'S'; //small , medium , large
   @Input('shade')
@@ -17,4 +21,17 @@ export class ButtonComponent {
   animation = 'F'; // circle , fade
   @Input('name')
   name = '';
+
+  animationClass = '';
+
+  setUpAnimation(){
+    this.animation==='F'&&this.shade==='D'?
+    ' hover:bg-emerald-50':
+    this.animation==='F'&&this.shade==='L'?
+    ' hover:bg-emerald-600':
+    this.animation==='F'&&this.shade==='W'?
+    'hover:bg-emerald-600':
+    ''
+  }
+
 }
