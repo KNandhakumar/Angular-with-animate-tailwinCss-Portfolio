@@ -4,8 +4,8 @@
     </div>
 </section>
 <div class="container py-24 flex gap-4">
-    <app-button></app-button>
-    <app-button size="M" shade="D" animation="C"></app-button>
-    <app-button size="L" shade="L" animation="C"></app-button>
-    <app-button size="L" shade="W" animation="C"></app-button>
+    <app-button (click)="test()" name="test"></app-button>
+    <app-button (click)="test()" size="M" shade="D" animation="C" name="Login"></app-button>
+    <app-button (click)="test()" size="L" shade="L" animation="C" name="Signup"></app-button>
+    <app-button (click)="test()" size="L" shade="W" animation="C" name="Github"></app-button>
 </div>

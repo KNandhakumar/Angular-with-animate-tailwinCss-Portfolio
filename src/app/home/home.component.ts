@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
 import { ButtonComponent } from '../shared/button/button.component';
 
 @Component({
@@ -11,5 +9,7 @@ import { ButtonComponent } from '../shared/button/button.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  test(){
+    console.log(this.test)
+  }
 }

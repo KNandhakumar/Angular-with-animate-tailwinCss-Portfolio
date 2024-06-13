@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
@@ -14,4 +15,6 @@ export class ButtonComponent {
   shade = 'NA'; // dark , light , white , NA -> not applicable -> Link
   @Input('animation')
   animation = 'F'; // circle , fade
+  @Input('name')
+  name = '';
 }

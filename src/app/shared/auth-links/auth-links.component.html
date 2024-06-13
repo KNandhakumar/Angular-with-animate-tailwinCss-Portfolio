@@ -1,8 +1,22 @@
-<ul class="flex justify-center gap-6 font-semibold text-slate-700 pr-3">
+<ul class="flex justify-center items-center gap-6 font-semibold text-slate-700 pr-3">
     <li>
-        <a href="">Resume!</a>
+        <!-- Large Screen -->
+        <a href="/assets/pdf/Nandhakumar.pdf" target="_blank">
+            <app-button class="hidden lg:block" name="Resume" shade="D" animation="C"></app-button>
+        </a>
+        <!-- Small Screen -->
+        <a href="/assets/pdf/Nandhakumar.pdf" target="_blank">
+            <app-button class="lg:hidden" name="Resume" shade="D" animation="C"></app-button>
+        </a>
     </li>
     <li>
-        <a href="">Hire me!</a>
+        <!-- Large Screen -->
+        <a href="#">
+            <app-button class="hidden lg:block" name="Hire me" size="S" shade="W" animation="F"></app-button>
+        </a>
+        <!-- Small Screen -->
+        <a href="#">
+            <app-button class="lg:hidden" name="Hire me" size="S" shade="W" animation="F"></app-button>
+        </a>
     </li>
 </ul>
