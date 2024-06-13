@@ -1,19 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { routes } from './app.routes';
-import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './shared/menu/menu.component';
+import { AuthLinksComponent } from './shared/auth-links/auth-links.component';
+import { SocialLinksComponent } from './shared/social-links/social-links.component';
+import { EmailComponent } from "./shared/email/email.component";
+import { PhoneComponent } from "./shared/phone/phone.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet,CommonModule,RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, CommonModule, RouterModule, MenuComponent, AuthLinksComponent, SocialLinksComponent, EmailComponent, PhoneComponent]
 })
 export class AppComponent {
 
-  isMenuScrolled = false;
+  isMenuScrolled = false
+  isSlidebarShowing = false;
+
   @HostListener('window:scroll',['$event'])
   scrollCheck(){
     if(window.pageYOffset>90)
@@ -22,5 +27,14 @@ export class AppComponent {
     this.isMenuScrolled = false;
 
     console.log(this.isMenuScrolled)
+  }
+
+  // sideBarOpen
+  slideBarOpen(){
+    this.isSlidebarShowing = true;
+  }
+  // closeSideBar
+  closeSidebar(){
+    this.isSlidebarShowing = false;
   }
 }

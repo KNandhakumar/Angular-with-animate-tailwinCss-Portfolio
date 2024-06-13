@@ -1,0 +1,35 @@
+<button class="relative group transition-all duration-500
+{{
+    this.animation==='F'&&this.shade==='D'?
+    ' hover:bg-emerald-50':
+    this.animation==='F'&&this.shade==='L'?
+    ' hover:bg-emerald-600':
+    this.animation==='F'&&this.shade==='w'?
+    'hover:bg-emerald-600':
+    ''
+}}
+
+{{
+    this.shade==='D'?'border bg-emerald-600 text-emerald-50 border-emerald-600 hover:text-slate-700':
+    this.shade==='L'?
+    'border bg-emerald-50 text-emerald-600 border-emerald-600 hover:text-emerald-50':
+    this.shade==='W'?
+    'border bg-white text-slate-700 border-emerald-600 hover:text-emerald-50':
+    'text-emerald-600 hover:text-slate-700'
+}}
+
+{{
+this.size==='S'?
+'px-5 py-2 rounded-lg font-medium text-base':
+this.size==='M'?
+'px-7 py-3 rounded-lg font-medium text-lg':
+'px-8 py-4 rounded-lg font-semibold text-lg'
+}}">
+    <span>
+        Click me
+    </span>
+    <!-- this is a rull for absolute how to center this method is very useful -->
+    <span class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[20%] rounded-full  bg-emerald-600 aspect-square">
+        
+    </span>
+</button>
