@@ -39,4 +39,11 @@ export class AppComponent {
   closeSidebar(){
     this.isSlidebarShowing = false;
   }
+
+  // scroll to top button
+  scrollToTop(){
+    document.body.scrollIntoView({
+      behavior:'smooth'
+    });
+  }
 }

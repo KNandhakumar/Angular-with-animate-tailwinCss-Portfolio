@@ -21,7 +21,7 @@
         
     </div>
 </nav>
-<header class="absolute w-full">
+<header class="absolute w-full z-40">
     <div class="bg-slate-800 hidden lg:block">
         <div class="container text-white py-2">
             <ul class="flex justify-between px-5">
@@ -60,3 +60,8 @@
     </div>
 </header>
 <router-outlet></router-outlet>
+<button *ngIf="isMenuScrolled" (click)="scrollToTop()" class="fixed flex bottom-5 right-5 w-10 h-10  text-white transition-all duration-300 bg-emerald-600 hover:bg-slate-800 rounded-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 m-auto stroke-emerald-50">
+        <path fill-rule="evenodd" d="M9.47 4.72a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 6.31l-3.72 3.72a.75.75 0 1 1-1.06-1.06l4.25-4.25Zm-4.25 9.25 4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 11.31l-3.72 3.72a.75.75 0 0 1-1.06-1.06Z" clip-rule="evenodd" />
+      </svg>      
+</button>
