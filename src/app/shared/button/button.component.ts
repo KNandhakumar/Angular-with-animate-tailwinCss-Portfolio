@@ -8,10 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrl: './button.component.css'
 })
-export class ButtonComponent implements OnInit{
-  ngOnInit(): void {
-    this.setUpAnimation()
-  }
+export class ButtonComponent{
+  
   
   @Input('size')
   size = 'S'; //small , medium , large
@@ -21,17 +19,4 @@ export class ButtonComponent implements OnInit{
   animation = 'F'; // circle , fade
   @Input('name')
   name = '';
-
-  animationClass = '';
-
-  setUpAnimation(){
-    this.animation==='F'&&this.shade==='D'?
-    ' hover:bg-emerald-50':
-    this.animation==='F'&&this.shade==='L'?
-    ' hover:bg-emerald-600':
-    this.animation==='F'&&this.shade==='W'?
-    'hover:bg-emerald-600':
-    ''
-  }
-
 }
