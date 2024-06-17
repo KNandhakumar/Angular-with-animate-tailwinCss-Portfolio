@@ -1,4 +1,4 @@
-import { FormsModule, NgForm } from '@Angular/forms';
+import { FormsModule, } from '@Angular/forms';
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 
