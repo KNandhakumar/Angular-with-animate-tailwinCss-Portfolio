@@ -10,7 +10,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent{
   
-  
+  @Input('disabled')
+  disabled = false;
   @Input('size')
   size = 'S'; //small , medium , large
   @Input('shade')
