@@ -12,38 +12,35 @@ import { TestComponent } from './test/test.component';
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
+    styleUrls: ['./app.component.css'],
     imports: [RouterOutlet, CommonModule, RouterModule, MenuComponent, AuthLinksComponent, SocialLinksComponent, EmailComponent, PhoneComponent, TestComponent]
 })
 export class AppComponent {
 
-  isMenuScrolled = false
+  isMenuScrolled = false;
   isSlidebarShowing = false;
 
-  // HosterListener use for all events like click scroll hover like this use for this decorator
-  @HostListener('window:scroll',['$event'])
-  scrollCheck(){
-    if(window.pageYOffset>90)
-      this.isMenuScrolled = true;
-    else
-    this.isMenuScrolled = false;
-
-    console.log(this.isMenuScrolled)
+  @HostListener('window:scroll', ['$event'])
+  scrollCheck() {
+    this.isMenuScrolled = window.pageYOffset > 90;
+    console.log(this.isMenuScrolled);
   }
 
-  // sideBarOpen
-  slideBarOpen(){
+  slideBarOpen() {
     this.isSlidebarShowing = true;
   }
-  // closeSideBar
-  closeSidebar(){
+
+  closeSidebar() {
     this.isSlidebarShowing = false;
   }
 
-  // scroll to top button
-  scrollToTop(){
+  scrollToTop() {
     document.body.scrollIntoView({
-      behavior:'smooth'
+      behavior: 'smooth'
     });
+  }
+
+  closeSidebarOnNavigate() {
+    this.closeSidebar();
   }
 }

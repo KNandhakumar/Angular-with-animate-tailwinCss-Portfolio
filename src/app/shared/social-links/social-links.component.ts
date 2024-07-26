@@ -8,5 +8,6 @@ import { Component, Input} from '@angular/core';
   styleUrl: './social-links.component.css'
 })
 export class SocialLinksComponent {
-  
+  @Input()
+  socialLinkColor = 'W';
 }

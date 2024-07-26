@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SocialLinksComponent } from '../social-links/social-links.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-
+  
 }
